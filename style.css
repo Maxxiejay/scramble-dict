@@ -1,0 +1,120 @@
+:root{
+  --primary-color: #FFE169;
+  
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
+
+/* Menu Container */
+.menu-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+/* Title */
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Menu Buttons */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn{
+  padding: 10px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  text-align: center;
+  /* Shadow to create the lifted effect */
+  box-shadow: 0 4px 0 #000;
+  position: relative;
+}
+
+/* Pressed effect */
+.btn-primary:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    max-height: 500vh;
+    height: 100%;
+    text-align: center;
+}
+.status {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#msg{
+  margin: 2rem 0;
+}
+
+.word-display {
+    font-size: 2rem;
+    font-family: monospace;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.5rem;
+}
+.letters-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+}
+.letter-button {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    /*border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    */
+}
+.letter-button:hover {
+    background-color: #f8fafc;
+}
+.letter-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
