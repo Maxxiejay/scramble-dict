@@ -37,7 +37,11 @@ function startGame() {
 }
 
 function scrambleWord(word) {
-  return word.split("").sort(() => Math.random() - 0.5);
+    let scrambled;
+    do {
+        scrambled = word.split("").sort(() => Math.random() - 0.5).join("");
+    } while (scrambled === word);  // Keep shuffling if it's the same as original
+    return scrambled.split("");  // Return as an array of letters
 }
 
 function selectNewWord() {
